@@ -11,11 +11,17 @@ object AppConstants {
         const val COMPOSE_REF = "Ref. https://m3.material.io/components"
     }
     object AppBar {
-        const val BottomOutput1 = "https://raw.githubusercontent.com/pwraxe/compose/main/compose/images/output-1.png"
-        const val BottomCode1 = "https://pwraxe.github.io/compose/compose/app/code/Test.html"
 
-        const val BottomOutput2 = ""
-        const val BottomCode2 = ""
+        const val TopOutput1 = "https://raw.githubusercontent.com/pwraxe/compose/main/compose/app/output/output_top_appbar1.jpg"
+        const val TopCode1 = "https://pwraxe.github.io/compose/compose/app/code/TopAppBar1.html"
+
+        const val BottomOutput1 = "https://raw.githubusercontent.com/pwraxe/compose/main/compose/app/output/output_bottom_appbar1.jpg"
+        const val BottomCode1 = "https://pwraxe.github.io/compose/compose/app/code/BottomAppBar1.html"
+
+        const val BottomOutput2 = "https://raw.githubusercontent.com/pwraxe/compose/main/compose/app/output/output_bottom_appbar2.jpg"
+        const val BottomCode2 = "https://pwraxe.github.io/compose/compose/app/code/BottomAppBar2.html"
+
+
     }
 
 }

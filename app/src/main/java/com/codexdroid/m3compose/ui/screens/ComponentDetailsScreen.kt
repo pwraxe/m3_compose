@@ -98,6 +98,9 @@ fun LoadWebUrl(url:String, modifier: Modifier) {
     AndroidView(modifier = modifier.fillMaxSize(), factory = {
         WebView(it).apply {
             settings.javaScriptEnabled = true
+            settings.loadWithOverviewMode = true
+            settings.useWideViewPort = true
+            settings.builtInZoomControls = true
             webViewClient = WebViewClient()
             loadUrl(url)
         }
