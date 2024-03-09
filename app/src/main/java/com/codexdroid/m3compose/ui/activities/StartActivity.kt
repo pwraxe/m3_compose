@@ -24,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.codexdroid.m3compose.R
+import com.codexdroid.m3compose.ui.screens.SplashScreen
 import com.codexdroid.m3compose.ui.theme.M3ComposeTheme
 import kotlinx.coroutines.delay
 
@@ -39,49 +40,11 @@ class StartActivity : ComponentActivity() {
                 }
                 val intent = Intent(LocalContext.current, HomeActivity::class.java)
                 LaunchedEffect(key1 = true) {
-                    delay(3000)
+                    delay(2000)
                     startActivity(intent)
                     finish()
                 }
             }
-        }
-    }
-}
-
-@Preview
-@Composable
-fun Preview() {
-    SplashScreen()
-}
-
-@Composable
-private fun SplashScreen() {
-    Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = R.drawable.ic_logo_foreground),
-            modifier = Modifier
-                .size(260.dp)
-                .align(alignment = Alignment.Center),
-            contentDescription = null)
-
-        Column(
-            modifier = Modifier
-                .align(alignment = Alignment.BottomCenter)
-                .padding(20.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-
-            Text(
-                text = "Inspired from",
-                fontSize = 12.sp,
-                textAlign = TextAlign.Center
-            )
-
-            Text(
-                text = "M3 & Compose Material Catalog App",
-                fontSize = 16.sp,
-                fontWeight = FontWeight.W600
-            )
         }
     }
 }

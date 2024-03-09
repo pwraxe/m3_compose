@@ -1,3 +1,59 @@
 <resources>
     <string name="app_name">M3 Compose</string>
+    <string name="str_purpose_1">I tend to forget code after a period of inactivity.</string>
+    <string name="str_purpose_2">I\'d like to access and understand my code from anywhere.</string>
+    <string name="str_purpose_3">I prefer to understand code logic later, after seeing the output first.</string>
+    <string name="str_purpose_4">I want to minimize time spent reading and visualizing code outputs.</string>
+
+    <string name="str_profile">Profile</string>
+    <string name="str_compose">Compose</string>
+    <string name="str_likedIn">LinkedIn</string>
+    <string name="str_git1">Main</string>
+    <string name="str_git2">Backup</string>
+    <string name="str_purpose">Purpose</string>
+    <string name="str_components">Components</string>
+    <string name="str_view">View</string>
+    <string name="str_search">Search</string>
+    <string name="inspired_from">Inspired from</string>
+    <string name="m3and_its_App">M3 &amp; Compose Material Catalog App</string>
+
+    <string name="comp_app_bar_bottom1">Bottom App Bar 1</string>
+    <string name="comp_app_bar_bottom2">Bottom App Bar 2</string>
+    <string name="comp_app_bar_top1">Top App Bar 1</string>
+    <string name="comp_app_bar_top2">Top App Bar 2</string>
+    <string name="comp_badges">Badges</string>
+    <string name="comp_button_elevated">Elevated Button</string>
+    <string name="comp_button_fill">Fill Button</string>
+    <string name="comp_button_fill_tonal">Fill Tonal Button</string>
+    <string name="comp_button_outline">Outline Button</string>
+    <string name="comp_button_text">Text Button</string>
+    <string name="comp_button_icon">Icon Button</string>
+    <string name="comp_button_segmented">Segmented Button</string>
+    <string name="comp_button_fab">FAB Button</string>
+    <string name="comp_button_extended">Extended FAB Button</string>
+    <string name="comp_card">Card</string>
+    <string name="comp_carousel">Carousel</string>
+    <string name="comp_checkbox">Checkbox</string>
+    <string name="comp_chip">Chip</string>
+    <string name="comp_date_picker">Date Picker</string>
+    <string name="comp_dialog">Dialog</string>
+    <string name="comp_divider">Divider</string>
+    <string name="comp_list">List</string>
+    <string name="comp_menu">Menu</string>
+    <string name="comp_navigation_bar">Navigation Bar</string>
+    <string name="comp_navigation_drawer">Navigation Drawer</string>
+    <string name="comp_navigation_rail">Navigation Rail</string>
+    <string name="comp_progress_indicator">Progress Indicator</string>
+    <string name="comp_radio_button">Radio Button</string>
+    <string name="comp_search">Search</string>
+    <string name="comp_sheet_bottom">Bottom Sheet</string>
+    <string name="comp_sheet_side">Side Sheet</string>
+    <string name="comp_slider">Slider</string>
+    <string name="comp_snackbar">Snackbar</string>
+    <string name="comp_button_switch">Switch Button</string>
+    <string name="comp_tab">Tab</string>
+    <string name="comp_text_field">TextField</string>
+    <string name="comp_time_picker">Time Picker</string>
+    <string name="comp_tooltip">Tooltip</string>
+
 </resources>
