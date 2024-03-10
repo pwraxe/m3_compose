@@ -29,5 +29,3 @@ val devDetails = listOf(
     DevData(icon = R.drawable.ic_github, text = R.string.str_git1, url = AppConstants.URLS.GIT_MAIN),
     DevData(icon = R.drawable.ic_github, text = R.string.str_git2, url = AppConstants.URLS.GIT_BACKUP)
 )
-
-

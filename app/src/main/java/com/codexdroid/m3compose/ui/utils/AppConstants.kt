@@ -2,6 +2,9 @@ package com.codexdroid.m3compose.ui.utils
 
 object AppConstants {
 
+    private const val BASE_OUTPUT = "https://raw.githubusercontent.com/pwraxe/compose/main/compose/app/output/"
+    private const val BASE_CODE = "https://pwraxe.github.io/compose/compose/app/code/"
+
     object URLS {
         const val PROFILE = "https://pwraxe.github.io/compose/profile/index.html"
         const val COMPOSE = "https://pwraxe.github.io/compose/index.html"
@@ -10,18 +13,52 @@ object AppConstants {
         const val GIT_BACKUP = "https://github.com/akshay100796"
         const val COMPOSE_REF = "Ref. https://m3.material.io/components"
     }
+
     object AppBar {
 
-        const val TopOutput1 = "https://raw.githubusercontent.com/pwraxe/compose/main/compose/app/output/output_top_appbar1.jpg"
-        const val TopCode1 = "https://pwraxe.github.io/compose/compose/app/code/TopAppBar1.html"
+        const val TOP_OUTPUT_1 = "${BASE_OUTPUT}output_top_appbar1.jpg"
+        const val TOP_CODE_1 = "${BASE_CODE}TopAppBar1.html"
 
-        const val BottomOutput1 = "https://raw.githubusercontent.com/pwraxe/compose/main/compose/app/output/output_bottom_appbar1.jpg"
-        const val BottomCode1 = "https://pwraxe.github.io/compose/compose/app/code/BottomAppBar1.html"
+        const val TOP_OUTPUT_2 = "${BASE_OUTPUT}output_top_appbar2.jpg"
+        const val TOP_CODE_2 = "${BASE_CODE}TopAppBar2.html"
 
-        const val BottomOutput2 = "https://raw.githubusercontent.com/pwraxe/compose/main/compose/app/output/output_bottom_appbar2.jpg"
-        const val BottomCode2 = "https://pwraxe.github.io/compose/compose/app/code/BottomAppBar2.html"
+        const val BOTTOM_OUTPUT_1 = "${BASE_OUTPUT}output_bottom_appbar1.jpg"
+        const val BOTTOM_CODE_1 = "${BASE_CODE}BottomAppBar1.html"
 
-
+        const val BOTTOM_OUTPUT_2 = "${BASE_OUTPUT}output_bottom_appbar2.jpg"
+        const val BOTTOM_CODE_2 = "${BASE_CODE}BottomAppBar2.html"
     }
 
+    object Badge {
+        const val OUTPUT = "${BASE_OUTPUT}output_badge.jpg"
+        const val CODE = "${BASE_CODE}Badge.html"
+    }
+
+    object Button {
+        const val ELEVATED_OUTPUT = "${BASE_OUTPUT}output_elevated_button.jpg"
+        const val ELEVATED_CODE = "${BASE_CODE}ButtonElevated.html"
+
+        const val FILLED_OUTPUT = "${BASE_OUTPUT}output_filled_button.jpg"
+        const val FILLED_CODE = "${BASE_CODE}ButtonFilled.html"
+
+        const val OUTLINE_OUTPUT = "${BASE_OUTPUT}output_outline_button.jpg"
+        const val OUTLINE_CODE = "${BASE_CODE}ButtonOutline.html"
+
+        const val TEXT_OUTPUT = "${BASE_OUTPUT}output_text_button.jpg"
+        const val TEXT_CODE = "${BASE_CODE}ButtonText.html"
+
+        const val ICON_OUTPUT = "${BASE_OUTPUT}output_icon_button.jpg"
+        const val ICON_CODE = "${BASE_CODE}ButtonIcon.html"
+
+        const val SEGMENTED_OUTPUT = "${BASE_OUTPUT}output_segmented_button.jpg"
+        const val SEGMENTED_CODE = "${BASE_CODE}ButtonSegmented.html"
+
+        const val FAB_OUTPUT = "${BASE_OUTPUT}output_fab_button.jpg"
+        const val FAB_CODE = "${BASE_CODE}ButtonFab.html"
+    }
+
+    object Card {
+        const val CARD_OUTPUT = "${BASE_OUTPUT}output_card.jpg"
+        const val CARD_CODE = "${BASE_CODE}Card.html"
+    }
 }
