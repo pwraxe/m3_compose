@@ -36,6 +36,7 @@
     <string name="comp_checkbox">Checkbox</string>
     <string name="comp_chip">Chip</string>
     <string name="comp_date_picker">Date Picker</string>
+    <string name="comp_date_range_picker">Date Range Picker</string>
     <string name="comp_dialog">Dialog</string>
     <string name="comp_divider">Divider</string>
     <string name="comp_list">List</string>

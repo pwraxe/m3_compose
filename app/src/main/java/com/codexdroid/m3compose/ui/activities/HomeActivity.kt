@@ -60,6 +60,5 @@ fun LetsStart(
         composable(SCREEN.PLAYGROUND.name) {
             PlayGroundScreen()
         }
-
     }
 }

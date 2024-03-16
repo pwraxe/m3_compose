@@ -61,4 +61,38 @@ object AppConstants {
         const val CARD_OUTPUT = "${BASE_OUTPUT}output_card.jpg"
         const val CARD_CODE = "${BASE_CODE}Card.html"
     }
+
+    object CheckBox {
+        const val OUTPUT = "${BASE_OUTPUT}output_checkbox.jpg"
+        const val CODE = "${BASE_CODE}Checkbox.html"
+    }
+
+    object Chip {
+        const val OUTPUT = "${BASE_OUTPUT}output_chip.jpg"
+        const val CODE = "${BASE_CODE}Chip.html"
+    }
+
+    object DatePicker {
+        const val OUTPUT = "${BASE_OUTPUT}output_date_picker.gif"
+        const val CODE = "${BASE_CODE}Date_Picker.html"
+    }
+
+    object DateRangePicker {
+        const val OUTPUT = "${BASE_OUTPUT}output_date_range_picker.jpg"
+        const val CODE = "${BASE_CODE}DateRangePicker.html"
+    }
+
+    object Dialog {
+        const val OUTPUT = "${BASE_OUTPUT}output_dialog.gif"
+        const val CODE = "${BASE_CODE}DateRangePicker.html"
+    }
+
+    object Divider {
+        const val OUTPUT = "${BASE_OUTPUT}output_divider.jpg"
+        const val CODE = "${BASE_CODE}Divider.html"
+    }
+    object LazyList {
+        const val OUTPUT = "${BASE_OUTPUT}output_lazy_list.jpg"
+        const val CODE = "${BASE_CODE}LazyList.html"
+    }
 }
