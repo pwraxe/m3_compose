@@ -9,9 +9,11 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -67,6 +69,8 @@ import androidx.compose.material3.DatePickerState
 import androidx.compose.material3.DateRangePicker
 import androidx.compose.material3.DateRangePickerState
 import androidx.compose.material3.DisplayMode
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ElevatedAssistChip
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ElevatedFilterChip
@@ -103,24 +107,33 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.DpOffset
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntRect
+import androidx.compose.ui.unit.IntSize
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import androidx.compose.ui.window.Popup
+import androidx.compose.ui.window.PopupPositionProvider
 import com.codexdroid.m3compose.ui.theme.Blue20
 import com.codexdroid.m3compose.ui.theme.Blue80
 import com.codexdroid.m3compose.ui.utils.fontMontserrat
 import com.codexdroid.m3compose.ui.utils.fontMontserratBold
 import java.text.SimpleDateFormat
 import java.util.Locale
-
 
 @Preview
 @Composable
@@ -132,96 +145,44 @@ fun PlayGroundPreview() {
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun PlayGroundScreen(modifier: Modifier = Modifier) {
-    Column(modifier = modifier
-        .fillMaxSize()
-        .background(color = Color.LightGray)) {
 
-        SimpleList(modifier)
-    }
-}
+    val density = LocalDensity.current
+    var touchPoint: Offset by remember { mutableStateOf(Offset.Zero) }
+    var expand by remember { mutableStateOf(false) }
+    val context = LocalContext.current
 
-
-@Composable
-fun SimpleList(modifier: Modifier) {
-    Column {
-        Text(text = "LazyRow")
-        LazyRow {
-            items(5){
-                SimpleWord(num = it + 1, modifier = modifier)
-            }
-        }
-
-        HorizontalDivider(color = Color.Black)
-
-        Text(text = "LazyColumn")
-        LazyColumn {
-            items(3) {
-                SimpleWord(num = it + 1, modifier = modifier)
-            }
-        }
-
-        HorizontalDivider(color = Color.Black)
-
-        Text(text = "LazyVerticalGrid")
-        LazyVerticalGrid(columns = GridCells.Fixed(2)) {
-            items(5) {
-                SimpleWord(num = it + 1, modifier = modifier)
-            }
-        }
-
-        HorizontalDivider(color = Color.Black)
-
-        Text(text = "LazyHorizontalGrid")
-        Box (modifier = modifier
-            .fillMaxWidth()
-            .height(100.dp)
-            .background(color = Color.Yellow)
-        ) {
-            LazyHorizontalGrid(
-                rows = GridCells.Fixed(2)
-            ) {
-                items(10) {
-                    SimpleWord(num = it + 1, modifier = modifier)
+    BoxWithConstraints(
+        Modifier
+            .fillMaxSize()
+            .background(color = Color.White)
+            .pointerInput(Unit) {
+                detectTapGestures {
+                    touchPoint = it
+                    expand = true
                 }
             }
+    ) {
+
+        val (xDp, yDp) = with(density) {
+            (touchPoint.x.toDp()) to (touchPoint.y.toDp())
         }
-
-        HorizontalDivider(color = Color.Black)
-
-        Text(text = "LazyHorizontalStaggeredGrid")
-        Box(
-            modifier = modifier
-                .fillMaxWidth()
-                .height(100.dp)
-                .background(color = Color.Magenta)
+        DropdownMenu(
+            expanded = expand,
+            onDismissRequest = { expand = false },
+            modifier = modifier,
+            offset = DpOffset(xDp,-maxHeight + yDp)
         ) {
-            LazyHorizontalStaggeredGrid(rows = StaggeredGridCells.Fixed(2)) {
-                items(5) {
-                    SimpleWord(num = it + 1, modifier = modifier)
-                }
+            repeat(5) {
+                DropdownMenuItem(
+                    text = {
+                        Text(text = "Menu Item No $it")
+                    },
+                    onClick = {
+                        Toast.makeText(context, "Menu $it Clicked", Toast.LENGTH_SHORT).show()
+                        expand = false
+
+                    } )
             }
         }
-
-        HorizontalDivider(color = Color.Black)
-
-        Text(text = "LazyVerticalStaggeredGrid")
-        LazyVerticalStaggeredGrid(columns = StaggeredGridCells.Fixed(4)) {
-            items(8) {
-                SimpleWord(num = it + 1, modifier = modifier)
-            }
-        }
-
-    }
-}
-
-@Composable
-fun SimpleWord(num:Int, modifier: Modifier) {
-    OutlinedCard(modifier = modifier.padding(10.dp)) {
-        Text(
-            text = "It's Word $num",
-            fontFamily = fontMontserrat,
-            fontSize = 14.sp,
-            modifier = modifier.padding(6.dp)
-        )
     }
 }

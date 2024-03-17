@@ -31,6 +31,8 @@ val componentsList = listOf(
     ComponentData(R.string.comp_dialog,AppConstants.Dialog.OUTPUT,AppConstants.Dialog.CODE),
     ComponentData(R.string.comp_divider,AppConstants.Divider.OUTPUT,AppConstants.Divider.CODE),
     ComponentData(R.string.comp_list,AppConstants.LazyList.OUTPUT,AppConstants.LazyList.CODE),
+    ComponentData(R.string.comp_popup,AppConstants.PopUp.OUTPUT,AppConstants.PopUp.CODE),
+
     ComponentData(R.string.comp_menu,"",""),
     ComponentData(R.string.comp_navigation_bar,"",""),
     ComponentData(R.string.comp_navigation_drawer,"",""),

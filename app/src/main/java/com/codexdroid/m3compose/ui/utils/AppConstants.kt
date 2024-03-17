@@ -84,7 +84,7 @@ object AppConstants {
 
     object Dialog {
         const val OUTPUT = "${BASE_OUTPUT}output_dialog.gif"
-        const val CODE = "${BASE_CODE}DateRangePicker.html"
+        const val CODE = "${BASE_CODE}Dialog.html"
     }
 
     object Divider {
@@ -94,5 +94,10 @@ object AppConstants {
     object LazyList {
         const val OUTPUT = "${BASE_OUTPUT}output_lazy_list.jpg"
         const val CODE = "${BASE_CODE}LazyList.html"
+    }
+
+    object PopUp {
+        const val OUTPUT = "${BASE_OUTPUT}output_popup.gif"
+        const val CODE = "${BASE_CODE}PopUpMenu.html"
     }
 }

@@ -40,6 +40,7 @@
     <string name="comp_dialog">Dialog</string>
     <string name="comp_divider">Divider</string>
     <string name="comp_list">List</string>
+    <string name="comp_popup">Popup Menu</string>
     <string name="comp_menu">Menu</string>
     <string name="comp_navigation_bar">Navigation Bar</string>
     <string name="comp_navigation_drawer">Navigation Drawer</string>
