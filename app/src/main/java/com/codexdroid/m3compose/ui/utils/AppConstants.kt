@@ -16,6 +16,9 @@ object AppConstants {
 
     object AppBar {
 
+        const val TOP_OUTPUT_0 = "${BASE_OUTPUT}output_app_bar.jpg"
+        const val TOP_CODE_0 = "${BASE_CODE}AppBar.html"
+
         const val TOP_OUTPUT_1 = "${BASE_OUTPUT}output_top_appbar1.jpg"
         const val TOP_CODE_1 = "${BASE_CODE}TopAppBar1.html"
 
@@ -99,5 +102,10 @@ object AppConstants {
     object PopUp {
         const val OUTPUT = "${BASE_OUTPUT}output_popup.gif"
         const val CODE = "${BASE_CODE}PopUpMenu.html"
+    }
+
+    object Navigation {
+        const val DRAWER_OUTPUT = "${BASE_OUTPUT}output_navigation_drawer.jpg"
+        const val DRAWER_CODE = "${BASE_CODE}NavigationDrawer.html"
     }
 }

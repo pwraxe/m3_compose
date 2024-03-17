@@ -11,8 +11,10 @@ data class ComponentData (
 val componentsList = listOf(
     ComponentData(R.string.comp_app_bar_bottom1,AppConstants.AppBar.BOTTOM_OUTPUT_1,AppConstants.AppBar.BOTTOM_CODE_1),
     ComponentData(R.string.comp_app_bar_bottom2,AppConstants.AppBar.BOTTOM_OUTPUT_2,AppConstants.AppBar.BOTTOM_CODE_2),
+    ComponentData(R.string.comp_app_bar,AppConstants.AppBar.TOP_OUTPUT_0,AppConstants.AppBar.TOP_CODE_0),
     ComponentData(R.string.comp_app_bar_top1,AppConstants.AppBar.TOP_OUTPUT_1,AppConstants.AppBar.TOP_CODE_1),
     ComponentData(R.string.comp_app_bar_top2,AppConstants.AppBar.TOP_OUTPUT_2,AppConstants.AppBar.TOP_CODE_2),
+
 
     ComponentData(R.string.comp_badges,AppConstants.Badge.OUTPUT,AppConstants.Badge.CODE),
     ComponentData(R.string.comp_button_elevated,AppConstants.Button.ELEVATED_OUTPUT,AppConstants.Button.ELEVATED_CODE),
