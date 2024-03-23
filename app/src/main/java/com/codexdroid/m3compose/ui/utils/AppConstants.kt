@@ -38,6 +38,7 @@ object AppConstants {
     }
 
     object Button {
+
         const val ELEVATED_OUTPUT = "${BASE_OUTPUT}output_elevated_button.jpg"
         const val ELEVATED_CODE = "${BASE_CODE}ButtonElevated.html"
 
@@ -58,6 +59,9 @@ object AppConstants {
 
         const val FAB_OUTPUT = "${BASE_OUTPUT}output_fab_button.jpg"
         const val FAB_CODE = "${BASE_CODE}ButtonFab.html"
+
+        const val RADIO_OUTPUT = "${BASE_OUTPUT}output_radio_button.jpg"
+        const val RADIO_CODE = "${BASE_CODE}RadioButton.html"
     }
 
     object Card {
@@ -104,8 +108,37 @@ object AppConstants {
         const val CODE = "${BASE_CODE}PopUpMenu.html"
     }
 
+    object Menu {
+        const val OUTPUT = "${BASE_OUTPUT}output_menu.jpg"
+        const val CODE = "${BASE_CODE}Menu.html"
+    }
+
     object Navigation {
         const val DRAWER_OUTPUT = "${BASE_OUTPUT}output_navigation_drawer.jpg"
         const val DRAWER_CODE = "${BASE_CODE}NavigationDrawer.html"
+
+        const val BAR_OUTPUT = "${BASE_OUTPUT}output_navigation_bar.jpg"
+        const val BAR_CODE = "${BASE_CODE}NavigationBar.html"
+
+        const val RAIL_OUTPUT = "${BASE_OUTPUT}output_nav_rail.jpg"
+        const val RAIL_CODE = "${BASE_CODE}NavigationRail.html"
+    }
+
+    object Progress {
+        const val INDICATOR_OUTPUT = "${BASE_OUTPUT}output_progress_indicator.jpg"
+        const val INDICATOR_CODE = "${BASE_CODE}ProgressIndicator.html"
+    }
+
+    object Search {
+        const val OUTPUT = "${BASE_OUTPUT}output_search_bar.gif"
+        const val CODE = "${BASE_CODE}SearchBar.html"
+    }
+
+    object Sheet {
+        const val BOTTOM_OUTPUT = "${BASE_OUTPUT}output_bottom_sheet.gif"
+        const val BOTTOM_CODE = "${BASE_CODE}BottomSheet.html"
+
+        const val SIDE_OUTPUT = "${BASE_OUTPUT}output_side_sheet.gif"
+        const val SIDE_CODE = "${BASE_CODE}SideSheet.html"
     }
 }
