@@ -27,6 +27,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -60,6 +61,8 @@ fun HomeScreen(
     onViewClicked: () -> Unit,
     onPlayGroundClicked: () -> Unit,
     modifier: Modifier = Modifier) {
+
+    val context = LocalContext.current
 
     Box(modifier = modifier
         .fillMaxSize()
@@ -165,6 +168,15 @@ fun HomeScreen(
             Text(
                 text = stringResource(R.string.m3and_its_App),
                 fontSize = 16.sp,
+                fontFamily = fontMontserrat,
+                fontWeight = FontWeight.W600
+            )
+
+            val manager = context.packageManager
+            val version = manager.getPackageInfo(context.packageName,0).versionName
+            Text(
+                text = "Beginner Version: $version",
+                fontSize = 12.sp,
                 fontFamily = fontMontserrat,
                 fontWeight = FontWeight.W600
             )

@@ -14,8 +14,6 @@ val componentsList = listOf(
     ComponentData(R.string.comp_app_bar,AppConstants.AppBar.TOP_OUTPUT_0,AppConstants.AppBar.TOP_CODE_0),
     ComponentData(R.string.comp_app_bar_top1,AppConstants.AppBar.TOP_OUTPUT_1,AppConstants.AppBar.TOP_CODE_1),
     ComponentData(R.string.comp_app_bar_top2,AppConstants.AppBar.TOP_OUTPUT_2,AppConstants.AppBar.TOP_CODE_2),
-
-
     ComponentData(R.string.comp_badges,AppConstants.Badge.OUTPUT,AppConstants.Badge.CODE),
     ComponentData(R.string.comp_button_elevated,AppConstants.Button.ELEVATED_OUTPUT,AppConstants.Button.ELEVATED_CODE),
     ComponentData(R.string.comp_button_fill,AppConstants.Button.FILLED_OUTPUT,AppConstants.Button.FILLED_CODE),
@@ -43,12 +41,11 @@ val componentsList = listOf(
     ComponentData(R.string.comp_search,AppConstants.Search.OUTPUT,AppConstants.Search.CODE),
     ComponentData(R.string.comp_sheet_bottom,AppConstants.Sheet.BOTTOM_OUTPUT,AppConstants.Sheet.BOTTOM_CODE),
     ComponentData(R.string.comp_sheet_side,AppConstants.Sheet.SIDE_OUTPUT,AppConstants.Sheet.SIDE_CODE),
-
-    ComponentData(R.string.comp_slider,"",""),
-    ComponentData(R.string.comp_snackbar,"",""),
-    ComponentData(R.string.comp_button_switch,"",""),
-    ComponentData(R.string.comp_tab,"",""),
-    ComponentData(R.string.comp_text_field,"",""),
-    ComponentData(R.string.comp_time_picker,"",""),
-    ComponentData(R.string.comp_tooltip,"","")
+    ComponentData(R.string.comp_slider,AppConstants.Slider.OUTPUT,AppConstants.Slider.CODE),
+    ComponentData(R.string.comp_snackbar,AppConstants.Snackbar.OUTPUT,AppConstants.Snackbar.CODE),
+    ComponentData(R.string.comp_button_switch,AppConstants.Switch.OUTPUT,AppConstants.Switch.CODE),
+    ComponentData(R.string.comp_tab,AppConstants.Tab.OUTPUT,AppConstants.Tab.CODE),
+    ComponentData(R.string.comp_text_field,AppConstants.TextField.OUTPUT,AppConstants.TextField.CODE),
+    ComponentData(R.string.comp_time_picker,AppConstants.TimePicker.OUTPUT,AppConstants.TimePicker.CODE),
+    ComponentData(R.string.comp_tooltip,AppConstants.Tooltip.OUTPUT,AppConstants.Tooltip.CODE)
 )

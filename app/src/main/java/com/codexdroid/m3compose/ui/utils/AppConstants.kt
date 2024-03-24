@@ -141,4 +141,39 @@ object AppConstants {
         const val SIDE_OUTPUT = "${BASE_OUTPUT}output_side_sheet.gif"
         const val SIDE_CODE = "${BASE_CODE}SideSheet.html"
     }
+
+    object Slider {
+        const val OUTPUT = "${BASE_OUTPUT}output_slider.gif"
+        const val CODE = "${BASE_CODE}Slider.html"
+    }
+
+    object Snackbar {
+        const val OUTPUT = "${BASE_OUTPUT}output_snack.gif"
+        const val CODE = "${BASE_CODE}Snackbar.html"
+    }
+
+    object Switch {
+        const val OUTPUT = "${BASE_OUTPUT}output_switch.jpg"
+        const val CODE = "${BASE_CODE}Switch.html"
+    }
+
+    object Tab {
+        const val OUTPUT = "${BASE_OUTPUT}output_tabs.jpg"
+        const val CODE = "${BASE_CODE}Tab.html"
+    }
+
+    object TextField {
+        const val OUTPUT = "${BASE_OUTPUT}output_textfield.jpg"
+        const val CODE = "${BASE_CODE}TextField.html"
+    }
+
+    object TimePicker {
+        const val OUTPUT = "${BASE_OUTPUT}output_time_picker.gif"
+        const val CODE = "${BASE_CODE}TimePicker.html"
+    }
+
+    object Tooltip {
+        const val OUTPUT = "${BASE_OUTPUT}output_tooltip.gif"
+        const val CODE = "${BASE_CODE}Tooltip.html"
+    }
 }
