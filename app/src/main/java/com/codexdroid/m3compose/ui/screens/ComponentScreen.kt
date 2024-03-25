@@ -125,8 +125,8 @@ fun ComponentCard(onCardClicked: (ComponentData) -> Unit, component: ComponentDa
 
         Text(
             text = stringResource(id = component.componentName),
-            fontFamily = fontMontserratBold,
-            fontSize = 12.sp,
+            fontFamily = fontMontserrat,
+            fontSize = 10.sp,
             color = Blue80
         )
     }

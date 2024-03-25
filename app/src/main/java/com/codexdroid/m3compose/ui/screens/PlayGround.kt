@@ -15,6 +15,7 @@ import androidx.compose.foundation.BasicTooltipState
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.MutatorMutex
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -85,6 +86,7 @@ import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.Check
@@ -302,105 +304,53 @@ fun PlayGroundPreview() {
 @Composable
 fun PlayGroundScreen(modifier: Modifier = Modifier) {
 
-    Column(modifier = modifier
+    Row (modifier = modifier
         .fillMaxSize()
-        .background(color = Color.White)) {
+        .background(color = Color.White)){
 
-        Column {
-            var showRichTooltip by remember { mutableStateOf(false) }
-            OutlinedButton(onClick = { showRichTooltip = true }) {
-                Text(text = "Show Rich Tooltip")
-            }
-
-            if (showRichTooltip) {
-                RichTooltip(modifier = modifier,
-                    title = {
-                        Text(text = "This could be full description of particular content or functionality")
-                    },
-                    action = {
-                        TextButton(onClick = { showRichTooltip = false }) {
-                            Text(text = "Next")
-                        }
-                    },
-                    shape = RoundedCornerShape(20.dp),
-                    colors = RichTooltipColors(containerColor = Color.Yellow, contentColor = Color.Black,
-                        titleContentColor = Color.Red, actionContentColor = Color.Blue
-                    )
-                ) {}
-            }
-
+        TextButton(
+            onClick = {},
+            modifier = modifier
+                .padding(6.dp)
+                .border(
+                    width = 1.dp,
+                    color = Color.Gray,
+                    shape = RoundedCornerShape(10.dp)
+                )
+            ) {
+            Image(painter = painterResource(id = R.drawable.ic_copy), contentDescription = null)
+            Spacer(modifier = modifier.padding(start = 10.dp))
+            Text(text = "Code Link")
         }
 
-        Column {
-            val state = rememberTooltipState(
-                initialIsVisible = false,
-                isPersistent = true,
-                mutatorMutex = MutatorMutex()
-            )
-            val pos = TooltipDefaults.rememberPlainTooltipPositionProvider()
-            var showTooltip by remember { mutableStateOf(false) }
-
-            OutlinedButton(onClick = { showTooltip = true }) {
-                Text(text = "Open TooltipBox")
-            }
-
-            if(showTooltip) {
-                TooltipBox(
-                    positionProvider = pos,
-                    tooltip = {},
-                    state = state,
-                    modifier = modifier,
-                    focusable = true,
-                    enableUserInput = true) {
-
-                    ToolTipView(modifier, onClicked = { showTooltip = false })
-                }
-            }
+        TextButton(
+            onClick = {},
+            modifier = modifier
+                .padding(6.dp)
+                .border(
+                    width = 1.dp,
+                    color = Color.Gray,
+                    shape = RoundedCornerShape(10.dp)
+                )
+        ) {
+            Image(painter = painterResource(id = R.drawable.ic_copy), contentDescription = null)
+            Spacer(modifier = modifier.padding(start = 10.dp))
+            Text(text = "Output Link")
         }
 
-        Column {
-            var openBasicToolTip by remember { mutableStateOf(false) }
-            val state = rememberBasicTooltipState(
-                initialIsVisible = false,
-                isPersistent = true,
-                mutatorMutex = MutatorMutex()
-            )
-            val pos = TooltipDefaults.rememberPlainTooltipPositionProvider()
-
-            OutlinedButton(onClick = { openBasicToolTip = true }) {
-                Text(text = "Open BasicTooltipBox")
-            }
-
-            if (openBasicToolTip) {
-                BasicTooltipBox(positionProvider = pos,
-                    tooltip = {
-                        ToolTipView(modifier = modifier) {}
-                    }, state = state ) {
-                    ToolTipView(modifier = modifier) { openBasicToolTip = false }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun ToolTipView(modifier: Modifier, onClicked: () -> Unit) {
-
-    Column (modifier = modifier
-        .background(
-            color = Color(0xAA000000),
-            shape = RoundedCornerShape(10.dp)
-        )
-        .padding(10.dp)
-
-    ) {
-
-        Text(text = "Hello From Title", color = Color.White)
-        Text(text = "Hello From New Passage or new line can't say anything",
-            color = Color.White)
-        TextButton(onClick = { onClicked() },
-            modifier = modifier.align(alignment = Alignment.End)) {
-            Text(text = "Next", color = Color.White,)
+        TextButton(
+            onClick = {},
+            modifier = modifier
+                .padding(6.dp)
+                .border(
+                    width = 1.dp,
+                    color = Color.Gray,
+                    shape = RoundedCornerShape(10.dp)
+                )
+        ) {
+            Icon(imageVector = Icons.Default.Share, contentDescription = null)
+            Spacer(modifier = modifier.padding(start = 10.dp))
+            Text(text = "Share")
         }
     }
 }

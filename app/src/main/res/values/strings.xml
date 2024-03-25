@@ -58,5 +58,11 @@
     <string name="comp_text_field">TextField</string>
     <string name="comp_time_picker">Time Picker</string>
     <string name="comp_tooltip">Tooltip</string>
+    <string name="copy_code_link">Copy Code Link</string>
+    <string name="output_link">Output Link</string>
+    <string name="output_link_copied">Output Link Copied</string>
+    <string name="code_link_copied">Code Link Copied</string>
+    <string name="code_link">Code Link</string>
+    <string name="share">Share</string>
 
 </resources>
