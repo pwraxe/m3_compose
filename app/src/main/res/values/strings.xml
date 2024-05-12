@@ -64,5 +64,6 @@
     <string name="code_link_copied">Code Link Copied</string>
     <string name="code_link">Code Link</string>
     <string name="share">Share</string>
+    <string name="loading_image_please_wait">Loading Image, Please Wait...</string>
 
 </resources>

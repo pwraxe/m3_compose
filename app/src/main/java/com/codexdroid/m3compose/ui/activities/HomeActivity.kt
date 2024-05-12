@@ -16,14 +16,25 @@ import com.codexdroid.m3compose.ui.screens.ComponentScreen
 import com.codexdroid.m3compose.ui.screens.HomeScreen
 import com.codexdroid.m3compose.ui.screens.PlayGroundScreen
 import com.codexdroid.m3compose.ui.theme.M3ComposeTheme
+import com.codexdroid.m3compose.ui.utils.ConnectivityObserver
+import com.codexdroid.m3compose.ui.utils.NetworkConnectivityObserver
 import com.codexdroid.m3compose.ui.utils.SCREEN
+import com.codexdroid.m3compose.ui.utils.State
 
 class HomeActivity : ComponentActivity() {
+
+    private lateinit var connectivityObserver: ConnectivityObserver
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        connectivityObserver = NetworkConnectivityObserver(this)
         setContent {
             M3ComposeTheme {
-                LetsStart()
+                val status by connectivityObserver
+                    .observe()
+                    .collectAsState(
+                        initial = State.Unavailable
+                    )
+                LetsStart(status)
             }
         }
     }
@@ -31,6 +42,7 @@ class HomeActivity : ComponentActivity() {
 
 @Composable
 fun LetsStart(
+    state: State,
     navController: NavHostController = rememberNavController(),
     screenViewModel: ScreenViewModel = viewModel()) {
 
@@ -54,7 +66,7 @@ fun LetsStart(
 
         composable(SCREEN.COMPONENT_DETAILS.name) {
             val componentData by screenViewModel.componentData.collectAsState()
-            ComponentDetailsScreen(data = componentData)
+            ComponentDetailsScreen(data = componentData, connectivityObserver = state)
         }
 
         composable(SCREEN.PLAYGROUND.name) {
