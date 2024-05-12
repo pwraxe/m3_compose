@@ -13,7 +13,6 @@ val purposes = arrayOf(
     R.string.str_purpose_4,
 )
 
-//Todo: Change this custom applied font to default in Theme file, check occurrences
 val fontMontserrat = FontFamily(Font(R.font.montserrat))
 val fontMontserratBold = FontFamily(Font(R.font.montserrat_bold))
 

@@ -11,7 +11,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.codexdroid.m3compose.ui.screens.ComponentDetailsScreen
+import com.codexdroid.m3compose.ui.screens.CodeOutputScreen
 import com.codexdroid.m3compose.ui.screens.ComponentScreen
 import com.codexdroid.m3compose.ui.screens.HomeScreen
 import com.codexdroid.m3compose.ui.screens.PlayGroundScreen
@@ -66,7 +66,7 @@ fun LetsStart(
 
         composable(SCREEN.COMPONENT_DETAILS.name) {
             val componentData by screenViewModel.componentData.collectAsState()
-            ComponentDetailsScreen(data = componentData, connectivityObserver = state)
+            CodeOutputScreen(data = componentData, connectivityObserver = state)
         }
 
         composable(SCREEN.PLAYGROUND.name) {

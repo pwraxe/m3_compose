@@ -33,7 +33,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
@@ -53,28 +52,33 @@ import com.codexdroid.m3compose.ui.utils.purposes
 @Preview
 @Composable
 fun HomePreview() {
-    HomeScreen({},{})
+    HomeScreen({}, {})
 }
 
 @Composable
 fun HomeScreen(
     onViewClicked: () -> Unit,
     onPlayGroundClicked: () -> Unit,
-    modifier: Modifier = Modifier) {
+    modifier: Modifier = Modifier
+) {
 
     val context = LocalContext.current
 
-    Box(modifier = modifier
-        .fillMaxSize()
-        .background(color = Color.White)) {
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(color = Color.White)
+    ) {
 
         Column {
 
-            Card(modifier = modifier
-                .fillMaxWidth()
-                .padding(16.dp),
+            Card(
+                modifier = modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
                 colors = CardDefaults.cardColors(containerColor = Blue20),
-                shape = RoundedCornerShape(20.dp)) {
+                shape = RoundedCornerShape(20.dp)
+            ) {
 
                 Text(
                     text = stringResource(id = R.string.str_purpose),
@@ -91,15 +95,17 @@ fun HomeScreen(
                 )
 
 
-                LazyColumn (
-                    modifier = modifier.padding(10.dp,10.dp)){
-                    this.items (purposes) {
+                LazyColumn(
+                    modifier = modifier.padding(10.dp, 10.dp)
+                ) {
+                    this.items(purposes) {
                         MyPurpose(purpose = it)
                     }
                 }
 
-                LazyRow(modifier = modifier
-                    .fillMaxWidth(),
+                LazyRow(
+                    modifier = modifier
+                        .fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly,
                 ) {
                     this.items(devDetails) {
@@ -108,46 +114,55 @@ fun HomeScreen(
                 }
             }
 
-            Card(modifier = modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Blue20),
-                shape = RoundedCornerShape(16.dp)) {
-
-                Column(modifier = modifier
+            Card(
+                modifier = modifier
                     .fillMaxWidth()
-                    .padding(10.dp)) {
+                    .padding(16.dp),
+                colors = CardDefaults.cardColors(containerColor = Blue20),
+                shape = RoundedCornerShape(16.dp)
+            ) {
+
+                Column(
+                    modifier = modifier
+                        .fillMaxWidth()
+                        .padding(10.dp)
+                ) {
                     Text(
                         text = stringResource(id = R.string.str_components),
                         fontFamily = fontMontserratBold,
                         fontSize = 24.sp,
-                        modifier = modifier)
+                        modifier = modifier
+                    )
 
                     Text(
                         text = AppConstants.URLS.COMPOSE_REF,
                         fontFamily = fontMontserrat,
                         color = Gray63,
-                        modifier = modifier)
+                        modifier = modifier
+                    )
 
                     Button(
                         onClick = { onViewClicked() },
                         modifier = modifier.align(alignment = Alignment.End),
-                        colors = ButtonDefaults.buttonColors(containerColor = Blue80)) {
-                        Text (
+                        colors = ButtonDefaults.buttonColors(containerColor = Blue80)
+                    ) {
+                        Text(
                             text = stringResource(R.string.str_view),
                             fontFamily = fontMontserrat,
-                            fontWeight = FontWeight.W700
                         )
                     }
                 }
             }
 
-            OutlinedButton(onClick = { onPlayGroundClicked() },
-                modifier = Modifier.align(alignment = Alignment.CenterHorizontally)) {
+            OutlinedButton(
+                onClick = { onPlayGroundClicked() },
+                modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
+            ) {
                 Text(
-                    text = "Goto Playground",
+                    text = stringResource(R.string.goto_playground),
                     fontFamily = fontMontserrat,
-                    color = Blue80)
+                    color = Blue80
+                )
             }
         }
 
@@ -168,26 +183,25 @@ fun HomeScreen(
             Text(
                 text = stringResource(R.string.m3and_its_App),
                 fontSize = 16.sp,
-                fontFamily = fontMontserrat,
-                fontWeight = FontWeight.W600
-            )
+                fontFamily = fontMontserratBold,
+
+                )
 
             val manager = context.packageManager
-            val version = manager.getPackageInfo(context.packageName,0).versionName
+            val version = manager.getPackageInfo(context.packageName, 0).versionName
             Text(
                 text = "Beginner Version: $version",
                 fontSize = 12.sp,
                 fontFamily = fontMontserrat,
-                fontWeight = FontWeight.W600
-            )
+
+                )
         }
     }
 }
 
 @Composable
-fun MyPurpose(purpose:Int, modifier: Modifier = Modifier) {
+fun MyPurpose(purpose: Int, modifier: Modifier = Modifier) {
 
-    //Todo: Change to default font-family
     Text(
         text = stringResource(id = purpose),
         fontSize = 14.sp,
@@ -203,7 +217,7 @@ fun DevDetailsRow(devDetail: DevData, modifier: Modifier = Modifier) {
     val interactionSource = remember { MutableInteractionSource() }
     val uriHandler = LocalUriHandler.current
 
-    Column (modifier = Modifier
+    Column(modifier = Modifier
         .padding(6.dp)
         .background(
             color = Color.White,
@@ -220,8 +234,10 @@ fun DevDetailsRow(devDetail: DevData, modifier: Modifier = Modifier) {
         .size(80.dp, 40.dp),
         horizontalAlignment = Alignment.CenterHorizontally) {
 
-        Icon(painter = painterResource(id = devDetail.icon), modifier = modifier.size(24.dp),
-            contentDescription = stringResource(id = devDetail.text))
+        Icon(
+            painter = painterResource(id = devDetail.icon), modifier = modifier.size(24.dp),
+            contentDescription = stringResource(id = devDetail.text)
+        )
 
         Text(
             text = stringResource(id = devDetail.text),

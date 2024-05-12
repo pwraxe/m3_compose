@@ -18,7 +18,7 @@ interface ConnectivityObserver {
 
 }
 
-class NetworkConnectivityObserver(private val context: Context): ConnectivityObserver {
+class NetworkConnectivityObserver(context: Context): ConnectivityObserver {
     private val manager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
     override fun observe(): Flow<State> {
