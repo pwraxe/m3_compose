@@ -6,8 +6,8 @@ object AppConstants {
     private const val BASE_CODE = "https://pwraxe.github.io/compose/compose/app/code/"
 
     object URLS {
-        const val PROFILE = "https://pwraxe.github.io/compose/profile/index.html"
-        const val COMPOSE = "https://pwraxe.github.io/compose/index.html"
+        const val PROFILE = "https://pwraxe.github.io"
+        const val COMPOSE = "https://pwraxe.github.io/compose/"
         const val LINKEDIN = "https://www.linkedin.com/in/akshay-pawar-b7a0a8135/"
         const val GIT_MAIN = "https://github.com/pwraxe"
         const val GIT_BACKUP = "https://github.com/akshay100796"
