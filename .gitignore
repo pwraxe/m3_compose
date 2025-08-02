@@ -1,6 +1,10 @@
 *.iml
 .gradle
+.idea
 /local.properties
+app/build
+app/proguard-rules.pro
+app/release
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
