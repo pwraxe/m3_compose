@@ -3,9 +3,12 @@ package com.codexdroid.m3compose.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBars
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -47,8 +50,8 @@ fun PreviewComponent() {
 
 @Composable
 fun ComponentScreen(
-    onCardClicked: (ComponentData) -> Unit
-    ,screenViewModel: ScreenViewModel,
+    onCardClicked: (ComponentData) -> Unit,
+    screenViewModel: ScreenViewModel,
     modifier: Modifier = Modifier) {
 
     var searchField by remember { mutableStateOf("") }
@@ -56,6 +59,7 @@ fun ComponentScreen(
     Column(modifier = modifier
         .fillMaxSize()
         .background(color = Color.White)
+        .windowInsetsPadding(WindowInsets.systemBars)
         .padding(10.dp)) {
 
         OutlinedTextField (

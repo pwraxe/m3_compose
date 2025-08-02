@@ -3,6 +3,7 @@ package com.codexdroid.m3compose.ui.activities
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -25,6 +26,7 @@ class HomeActivity : ComponentActivity() {
 
     private lateinit var connectivityObserver: ConnectivityObserver
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         connectivityObserver = NetworkConnectivityObserver(this)
         setContent {
