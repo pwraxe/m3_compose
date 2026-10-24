@@ -84,7 +84,8 @@ fun CodeOutputScreen(
 
     var outputBackColor by remember { mutableStateOf(Blue40) }
     var codeBackColor by remember { mutableStateOf(Blue20) }
-
+    val outputCopiedMsg = stringResource(R.string.output_link_copied)
+    val codeCopiedMsg = stringResource(R.string.code_link_copied)
 
     val animateOutputBackColor = animateColorAsState(
         targetValue = outputBackColor,
@@ -182,8 +183,7 @@ fun CodeOutputScreen(
                                     clipboardManager.setText(AnnotatedString(data.componentOutput))
                                     Toast
                                         .makeText(
-                                            context,
-                                            context.getString(R.string.output_link_copied),
+                                            context, outputCopiedMsg,
                                             Toast.LENGTH_SHORT
                                         )
                                         .show()
@@ -192,7 +192,7 @@ fun CodeOutputScreen(
                                     Toast
                                         .makeText(
                                             context,
-                                            context.getString(R.string.code_link_copied),
+                                            codeCopiedMsg,
                                             Toast.LENGTH_SHORT
                                         )
                                         .show()
